@@ -15,77 +15,80 @@ const ProjectDetail: React.FC<ProjectDetailProps & { onBack: () => void }> = ({ 
   const isDreamRecorder = project.id === 'dream-recorder';
   const isRunningAudioNav = project.id === 'running-audio-nav';
 
-  // [수정 완료] 외부 링크(https://...)를 제거하고 로컬 경로(/파일이름)로 변경했습니다.
-  // 나머지는 호빈 님이 작성하신 원본 코드 그대로입니다.
-
   // BORNLAZY brand story image
-  const brandStoryImage = "/brand story.png";
+  const brandStoryImage = "https://raw.githubusercontent.com/gghqls0416/Hobin-Hwang-Portfolio/main/brand%20story.png";
 
   // BORNLAZY conceptual images
   const conceptualImages = [
-    "/hoodie on the ground.jpg",
-    "/hoodies on tree.jpg",
-    "/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202026-01-27%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%206.39.08.png"
+    "https://raw.githubusercontent.com/gghqls0416/Hobin-Hwang-Portfolio/main/hoodie%20on%20the%20ground.jpg",
+    "https://raw.githubusercontent.com/gghqls0416/Hobin-Hwang-Portfolio/main/hoodies%20on%20tree.jpg",
+    "https://raw.githubusercontent.com/gghqls0416/Hobin-Hwang-Portfolio/main/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202026-01-27%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%206.39.08.png"
   ];
 
   // BORNLAZY Art Direction & Visuals Gallery
   const artDirectionImages = [
-    "/post 3 demo.png",
-    "/post 5 demo.png",
-    "/post 7-2 demo.png",
-    "/sns contents.png",
-    "/sns contents 2.png",
-    "/brand photo 5.jpg",
-    "/brand photo 6.jpg",
-    "/brand photo 7.jpg",
-    "/brand photo 3.jpg",
-    "/product shot 3.jpg",
-    "/product shot.jpg",
-    "/product shot 2.jpg"
+    "https://raw.githubusercontent.com/gghqls0416/Hobin-Hwang-Portfolio/main/post%203%20demo.png",
+    "https://raw.githubusercontent.com/gghqls0416/Hobin-Hwang-Portfolio/main/post%205%20demo.png",
+    "https://raw.githubusercontent.com/gghqls0416/Hobin-Hwang-Portfolio/main/post%207-2%20demo.png",
+    "https://raw.githubusercontent.com/gghqls0416/Hobin-Hwang-Portfolio/main/sns%20contents.png",
+    "https://raw.githubusercontent.com/gghqls0416/Hobin-Hwang-Portfolio/main/sns%20contents%202.png",
+    "https://raw.githubusercontent.com/gghqls0416/Hobin-Hwang-Portfolio/main/brand%20photo%205.jpg",
+    "https://raw.githubusercontent.com/gghqls0416/Hobin-Hwang-Portfolio/main/brand%20photo%206.jpg",
+    "https://raw.githubusercontent.com/gghqls0416/Hobin-Hwang-Portfolio/main/brand%20photo%207.jpg",
+    "https://raw.githubusercontent.com/gghqls0416/Hobin-Hwang-Portfolio/main/brand%20photo%203.jpg",
+    "https://raw.githubusercontent.com/gghqls0416/Hobin-Hwang-Portfolio/main/product%20shot%203.jpg",
+    "https://raw.githubusercontent.com/gghqls0416/Hobin-Hwang-Portfolio/main/product%20shot.jpg",
+    "https://raw.githubusercontent.com/gghqls0416/Hobin-Hwang-Portfolio/main/product%20shot%202.jpg"
   ];
 
   // BORNLAZY identity spot images
   const identitySpotImages = [
-    "/identity spot key ring.jpg",
-    "/yellow scarf identity spot.jpg",
-    "/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202026-01-27%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%206.39.08.png"
+    "https://raw.githubusercontent.com/gghqls0416/Hobin-Hwang-Portfolio/main/identity%20spot%20key%20ring.jpg",
+    "https://raw.githubusercontent.com/gghqls0416/Hobin-Hwang-Portfolio/main/yellow%20scarf%20identity%20spot.jpg",
+    "https://raw.githubusercontent.com/gghqls0416/Hobin-Hwang-Portfolio/main/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202026-01-27%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%206.39.08.png"
   ];
 
   // BORNLAZY Marketing Result Images
   const marketingResultImages = [
-    "/Gemini_Generated_Image_va23w4va23w4va23.jpg",
-    "/IMG_4573.jpg",
-    "/IMG_4572.jpg"
+    "https://raw.githubusercontent.com/gghqls0416/Hobin-Hwang-Portfolio/main/Gemini_Generated_Image_va23w4va23w4va23.jpg",
+    "https://raw.githubusercontent.com/gghqls0416/Hobin-Hwang-Portfolio/main/IMG_4573.jpg",
+    "https://raw.githubusercontent.com/gghqls0416/Hobin-Hwang-Portfolio/main/IMG_4572.jpg"
   ];
 
   // Running Audio Nav images
-  const runningNavHomeImage = "/%E1%84%8E%E1%85%A5%E1%86%BA%E1%84%92%E1%85%AA%E1%84%86%E1%85%A7%E1%86%AB.jpg";
-  const runningNavMapImage = "/%E1%84%85%E1%85%A5%E1%84%82%E1%85%B5%E1%86%BC%E1%84%92%E1%85%AA%E1%84%86%E1%85%A7%E1%86%AB.jpg";
-  const runningNavArchiveImage = "/%E1%84%8C%E1%85%A5%E1%84%8C%E1%85%A1%E1%86%BC%E1%84%83%E1%85%AC%E1%86%AB%20%E1%84%85%E1%85%A5%E1%84%82%E1%85%B5%E1%86%BC%E1%84%8F%E1%85%A9%E1%84%89%E1%85%B3.jpg";
-  const runningNavSearchImage = "/%E1%84%85%E1%85%AE%E1%84%90%E1%85%B3%E1%84%90%E1%85%A1%E1%86%B7%E1%84%89%E1%85%A2%E1%86%A8%E1%84%8E%E1%85%A1%E1%86%B7.jpg"; // 원래 파일명 유지
-  const runningNavResultImage = "/result.jpg";
-  const runningNavOptimizationImage = "/%E1%84%80%E1%85%A7%E1%86%BC%E1%84%85%E1%85%A9%E1%84%89%E1%85%A2%E1%86%BC%E1%84%89%E1%85%A5%E1%86%BC%E1%84%8C%E1%85%AE%E1%86%BC.jpg";
-  const runningNavRoutePreviewImage = "/%E1%84%80%E1%85%A7%E1%86%BC%E1%84%85%E1%85%A9%E1%84%89%E1%85%A2%E1%86%BC%E1%84%89%E1%85%A5%E1%86%BC%20%E1%84%85%E1%85%AE%E1%84%90%E1%85%B3%20%E1%84%86%E1%85%B5%E1%84%85%E1%85%B5%E1%84%87%E1%85%A9%E1%84%80%E1%85%B5.jpg";
-  const runningNavTransitionImage = "/%E1%84%85%E1%85%AE%E1%84%90%E1%85%B3%20%E1%84%89%E1%85%B5%E1%84%8C%E1%85%A1%E1%86%A8%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5.jpg";
-  const runningNavHistoryImage = "/%E1%84%85%E1%85%A5%E1%84%82%E1%85%B5%E1%86%BC%E1%84%80%E1%85%B5%E1%84%85%E1%85%A9%E1%86%A8.jpg";
-  const runningNavDetailPopupImage = "/%E1%84%8F%E1%85%B3%E1%86%AF%E1%84%85%E1%85%B5%E1%86%A8%E1%84%92%E1%85%A1%E1%84%86%E1%85%A7%E1%86%AB%20%E1%84%85%E1%85%A5%E1%84%82%E1%85%B5%E1%86%BC%E1%84%80%E1%85%B5%E1%84%85%E1%85%A9%E1%86%A8%20%E1%84%8F%E1%85%B3%E1%84%80%E1%85%A6%E1%84%87%E1%85%A9%E1%84%80%E1%85%B5.jpg";
-  const runningNavInteractiveRouteImage = "/%E1%84%85%E1%85%AE%E1%84%90%E1%85%B3%20%E1%84%86%E1%85%B5%E1%84%87%E1%85%A9%E1%84%80%E1%85%B5.jpg";
+  const runningNavHomeImage = "https://raw.githubusercontent.com/gghqls0416/Hobin-Hwang-Portfolio/main/%E1%84%8E%E1%85%A5%E1%86%BA%E1%84%92%E1%85%AA%E1%84%86%E1%85%A7%E1%86%AB.jpg";
+  const runningNavMapImage = "https://raw.githubusercontent.com/gghqls0416/Hobin-Hwang-Portfolio/main/%E1%84%85%E1%85%A5%E1%84%82%E1%85%B5%E1%86%BC%E1%84%92%E1%85%AA%E1%84%86%E1%85%A7%E1%86%AB.jpg";
+  const runningNavArchiveImage = "https://raw.githubusercontent.com/gghqls0416/Hobin-Hwang-Portfolio/main/%E1%84%8C%E1%85%A5%E1%84%8C%E1%85%A1%E1%86%BC%E1%84%83%E1%85%AC%E1%86%AB%20%E1%84%85%E1%85%A5%E1%84%82%E1%85%B5%E1%86%BC%E1%84%8F%E1%85%A9%E1%84%89%E1%85%B3.jpg";
+  
+  // [수정 1] 루트 탐색창 -> search_input.jpg (public 폴더)
+  const runningNavSearchImage = "/search_input.jpg";
+  
+  const runningNavResultImage = "https://raw.githubusercontent.com/gghqls0416/Hobin-Hwang-Portfolio/main/result.jpg";
+  const runningNavOptimizationImage = "https://raw.githubusercontent.com/gghqls0416/Hobin-Hwang-Portfolio/main/%E1%84%80%E1%85%A7%E1%86%BC%E1%84%85%E1%85%A9%E1%84%89%E1%85%A2%E1%86%BC%E1%84%89%E1%85%A5%E1%86%BC%E1%84%8C%E1%85%AE%E1%86%BC.jpg";
+  
+  // [수정 2] 루트 미리보기 -> route_preview.jpg (public 폴더)
+  const runningNavRoutePreviewImage = "/route_preview.jpg";
+  
+  const runningNavTransitionImage = "https://raw.githubusercontent.com/gghqls0416/Hobin-Hwang-Portfolio/main/%E1%84%85%E1%85%AE%E1%84%90%E1%85%B3%20%E1%84%89%E1%85%B5%E1%84%8C%E1%85%A1%E1%86%A8%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5.jpg";
+  const runningNavHistoryImage = "https://raw.githubusercontent.com/gghqls0416/Hobin-Hwang-Portfolio/main/%E1%84%85%E1%85%A5%E1%84%82%E1%85%B5%E1%86%BC%E1%84%80%E1%85%B5%E1%84%85%E1%85%A9%E1%86%A8.jpg";
+  const runningNavDetailPopupImage = "https://raw.githubusercontent.com/gghqls0416/Hobin-Hwang-Portfolio/main/%E1%84%8F%E1%85%B3%E1%86%AF%E1%84%85%E1%85%B5%E1%86%A8%E1%84%92%E1%85%A1%E1%84%86%E1%85%A7%E1%86%AB%20%E1%84%85%E1%85%A5%E1%84%82%E1%85%B5%E1%86%BC%E1%84%80%E1%85%B5%E1%84%85%E1%85%A9%E1%86%A8%20%E1%84%8F%E1%85%B3%E1%84%80%E1%85%A6%E1%84%87%E1%85%A9%E1%84%80%E1%85%B5.jpg";
+  const runningNavInteractiveRouteImage = "https://raw.githubusercontent.com/gghqls0416/Hobin-Hwang-Portfolio/main/%E1%84%85%E1%85%AE%E1%84%90%E1%85%B3%20%E1%84%86%E1%85%B5%E1%84%87%E1%85%A9%E1%84%80%E1%85%B5.jpg";
 
   // Dream Recorder images
   const dreamRecorderInterfaceImages = [
-    "/IMG_4419.jpg",
-    "/IMG_4407.jpg"
+    "https://raw.githubusercontent.com/gghqls0416/Hobin-Hwang-Portfolio/main/IMG_4419.jpg",
+    "https://raw.githubusercontent.com/gghqls0416/Hobin-Hwang-Portfolio/main/IMG_4407.jpg"
   ];
   const dreamRecorderInteractionImages = [
-    "/IMG_4408.jpg",
-    "/IMG_4409.jpg",
-    "/IMG_4410.jpg"
+    "https://raw.githubusercontent.com/gghqls0416/Hobin-Hwang-Portfolio/main/IMG_4408.jpg",
+    "https://raw.githubusercontent.com/gghqls0416/Hobin-Hwang-Portfolio/main/IMG_4409.jpg",
+    "https://raw.githubusercontent.com/gghqls0416/Hobin-Hwang-Portfolio/main/IMG_4410.jpg"
   ];
-  const dreamRecorderMainResult = "/IMG_4411.jpg";
-  const dreamRecorderGalleryView = "/33.jpg";
+  const dreamRecorderMainResult = "https://raw.githubusercontent.com/gghqls0416/Hobin-Hwang-Portfolio/main/IMG_4411.jpg";
+  const dreamRecorderGalleryView = "https://raw.githubusercontent.com/gghqls0416/Hobin-Hwang-Portfolio/main/33.jpg";
   const dreamGalleryCollection = [
-    "/IMG_4418.jpg",
-    "/11.jpg"
+    "https://raw.githubusercontent.com/gghqls0416/Hobin-Hwang-Portfolio/main/IMG_4418.jpg",
+    "https://raw.githubusercontent.com/gghqls0416/Hobin-Hwang-Portfolio/main/11.jpg"
   ];
 
   return (
@@ -265,6 +268,7 @@ const ProjectDetail: React.FC<ProjectDetailProps & { onBack: () => void }> = ({ 
 
             {isRunningAudioNav && (
                <div className="space-y-32">
+                 {/* Section 1: Home Interface */}
                  <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
                     <div className="rounded-[40px] overflow-hidden shadow-2xl border border-gray-100 bg-white">
                         <img src={runningNavHomeImage} alt="Goal-Oriented Home Interface" className="w-full h-auto block" />
@@ -284,6 +288,7 @@ const ProjectDetail: React.FC<ProjectDetailProps & { onBack: () => void }> = ({ 
                     </div>
                  </div>
 
+                 {/* Section 2: Real-time Voice Guidance System */}
                  <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
                     <div className="order-2 md:order-1 space-y-8 md:sticky md:top-32">
                        <div className="space-y-2">
@@ -302,6 +307,7 @@ const ProjectDetail: React.FC<ProjectDetailProps & { onBack: () => void }> = ({ 
                     </div>
                  </div>
 
+                 {/* Section 3: Personalized Route Archive */}
                  <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
                     <div className="rounded-[40px] overflow-hidden shadow-2xl border border-gray-100 bg-white">
                         <img src={runningNavArchiveImage} alt="Personalized Route Archive" className="w-full h-auto block" />
@@ -321,6 +327,7 @@ const ProjectDetail: React.FC<ProjectDetailProps & { onBack: () => void }> = ({ 
                     </div>
                  </div>
 
+                 {/* Section 4: Interactive Route Analysis */}
                  <div className="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-12 items-start pt-16">
                     <div className="order-2 md:order-1 px-6 md:px-0 mt-12 md:mt-0 space-y-8 md:sticky md:top-32">
                        <div className="space-y-2">
@@ -343,6 +350,7 @@ const ProjectDetail: React.FC<ProjectDetailProps & { onBack: () => void }> = ({ 
                     </div>
                  </div>
 
+                 {/* Section 5: Intelligent Destination Search via Kakao Maps API */}
                  <div className="space-y-12">
                     <div className="space-y-2">
                        <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400">Intelligent Destination Search</h4>
@@ -350,6 +358,7 @@ const ProjectDetail: React.FC<ProjectDetailProps & { onBack: () => void }> = ({ 
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                        <div className="rounded-[40px] overflow-hidden shadow-2xl border border-gray-100 bg-white">
+                           {/* [수정] search_input.jpg 적용 */}
                            <img src={runningNavSearchImage} alt="Destination Search Input" className="w-full h-auto block" />
                        </div>
                        <div className="rounded-[40px] overflow-hidden shadow-2xl border border-gray-100 bg-white">
@@ -364,6 +373,7 @@ const ProjectDetail: React.FC<ProjectDetailProps & { onBack: () => void }> = ({ 
                     </div>
                  </div>
 
+                 {/* Section 6: Real-time Pedestrian Route Optimization (Refined Layout: Full Bleed & Sticky) */}
                  <div className="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-12 items-start pt-16">
                     <div className="w-full rounded-[40px] overflow-hidden shadow-2xl border border-gray-100 bg-white">
                         <img 
@@ -401,6 +411,7 @@ const ProjectDetail: React.FC<ProjectDetailProps & { onBack: () => void }> = ({ 
                        </div>
                     </div>
                     <div className="order-1 md:order-2 w-full rounded-[40px] overflow-hidden shadow-2xl border border-gray-100 bg-white">
+                        {/* [수정] route_preview.jpg 적용 */}
                         <img 
                           src={runningNavRoutePreviewImage} 
                           alt="Visual Route Preview" 
@@ -583,7 +594,9 @@ const ProjectDetail: React.FC<ProjectDetailProps & { onBack: () => void }> = ({ 
                   <div className="space-y-2"><h4 className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400">Dream Recorder: 무의식의 시각화 과정</h4></div>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {dreamRecorderInteractionImages.map((img, i) => (
-                      <img key={i} src={img} alt="Loading sequence" className="w-full rounded-3xl shadow-md" />
+                      <div key={i} className="space-y-4">
+                          <img src={img} alt="Loading sequence" className="w-full rounded-3xl shadow-md" />
+                      </div>
                     ))}
                   </div>
                   <div className="bg-gray-50/80 border border-gray-100 p-10 md:p-16 rounded-[40px] space-y-12">
